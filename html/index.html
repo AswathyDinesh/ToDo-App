@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app='todo'>
+    <head>
+        <title>To Do list in Angular JS</title>
+		<script type="text/javascript" src=""></script>
+		<script src="C:\Users\852762\Desktop\Projects\Search\JSS\angular.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+       
+			<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'  type='text/css'>
+		
+		 <script type="text/javascript" src="app1.js"></script>
+		 <link rel="stylesheet" href="app1.css" type="text/css" />
+	
+	<script src="underscore.js"></script>
+    </head>
+    <body>
+	
+	<body style="background-color: silver";>
+	
+ <div ng-app="todoapp" >
+ <div id="todoapp" ng-controller="ToDoCtrl">
+ 
+        
+		
+			<!---TITLE--->
+			<h1 id="h_one" >ANGULAR TODO APP</h1>
+			
+            <!--Add Task-->
+			<div id="h_three">
+            <div id="new">
+                <input type="text" name="add-task" class='add_task' placeholder="Add your task here" ng-model="taskName" ng-keyup="addTask()"/>
+                
+            </div>
+            
+            <!--Task list-->
+            <ul id="todo-list">
+			<li id="s1" ng-repeat="task in tasklist  | filter:{ completed:actualStatus}" ng-mouseenter="task.showdelete = true; item= 'focus'" ng-mouseleave="task.showdelete = false; item = 'nofocus'">                   
+			<input type="checkbox" name="checkbox" ng-model="task.completed">
+                    <span class="completed-{{task.completed}}">{{task.name}}</span>
+					
+              </input>      
+                    
+					<span class="delete icon" title="Delete Task" ng-show="task.showdelete" ng-click="deleteTask(tasklist.indexOf(task))"></span>
+					
+            </li>
+            </ul>
+			<!--Remaining tasks-->
+			<h2 id= "rem"> You have <span class="emphasis">{{getTotalTodos()}}</span>task(s) in the list.</h2>
+			
+			<!--Commands-->
+			<div class="status">
+			
+			<button class="btn btn-primary" ng-click="actualStatus = ''" >All</button>
+			<button class="btn btn-primary" ng-click="actualStatus = 'false'">Active</button>
+			<button class="btn btn-primary" ng-click="actualStatus = 'true'" >Completed</button>
+			
+
+			
+			</div>
+			
+        </div>
+		</div>
+		</div>
+		
+       
+    </body>
+</html>
