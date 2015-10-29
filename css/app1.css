@@ -1,0 +1,55 @@
+<style>
+*{
+	margin:0;
+	padding:0;
+	
+}
+
+
+#h_one {
+    font-family:'Roboto';
+    font-size: 59px;
+    line-height: 60px;
+	
+	text-align: center;
+    padding-top: 9%;
+    color: aqua333333;
+	text-shadow: 4px 4px 4px #aaa;
+}
+#h_three {
+    font-family:'Roboto';
+    font-size: 30px;
+    line-height: 40px;
+	
+	text-align: center;
+    padding-top: 9%;
+    color: aqua333333;
+	text-shadow: 2px 2px 2px #aaa;
+}
+
+#new{
+
+    border-radius: 10%;
+}
+
+
+
+.todo-list{
+	 font-family:'Roboto';
+    font-size: 59px;
+    line-height: 60px;
+	
+	text-align: center;
+    padding-top: 9%;
+    color: aqua333333;
+	text-shadow: 4px 4px 4px #aaa;
+	
+}
+
+.todo-list:hover{
+	background: #999;
+	font-family:'Roboto';
+}
+
+
+
